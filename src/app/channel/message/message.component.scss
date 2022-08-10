@@ -1,0 +1,23 @@
+.message {
+  background-color: coral;
+  width: 90%;
+  height: 15%;
+  border-radius: 3%;
+  margin: 1% 0;
+  padding: 1%;
+
+  .message__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    .header__sender {
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  .message__content {
+    font-size: xx-large;
+  }
+}

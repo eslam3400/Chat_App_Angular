@@ -1,0 +1,23 @@
+<main>
+  <section class="sidebar">
+    <h2>Channel: <span class="sidebar__heighlight">{{channelServices.channel}}</span> </h2>
+    <h2>Username: <span class="sidebar__heighlight">{{channelServices.username}}</span></h2>
+    <button>Leave</button>
+    <section class="sidebar__users">
+      <h2>Online Users</h2>
+      <ul>
+        <li *ngFor="let user of channelServices.onlineUsers">{{user.username}}</li>
+      </ul>
+    </section>
+  </section>
+  <section class="chat">
+    <div class="chat__box">
+      <app-message *ngFor="let message of messageService.messages" [date]="message.date" [sender]="message.sender"
+        [content]="message.content"></app-message>
+    </div>
+    <div class="chat__message">
+      <textarea cols="30" rows="6" [(ngModel)]="message"></textarea>
+      <button (click)="send()">Send</button>
+    </div>
+  </section>
+</main>

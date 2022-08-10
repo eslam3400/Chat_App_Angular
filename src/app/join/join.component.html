@@ -1,0 +1,17 @@
+<main>
+  <section class="join">
+    <h2>#DevChannel</h2>
+    <form class="join__form" [formGroup]="enterChannel" (ngSubmit)="onSubmit()">
+      <div>
+        <input type="text" placeholder="Name" formControlName="username">
+      </div>
+      <div style="width: 100%;padding-top: 10%;">
+        <label for="channel">Select Channel</label>
+        <select name="channel" id="channel" style="width: 100%;" formControlName="channel">
+          <option *ngFor="let channel of channels" [value]="channel">{{channel}}</option>
+        </select>
+      </div>
+      <input type="submit" value="Join" style="width: 100%;margin-top: 10%;">
+    </form>
+  </section>
+</main>
